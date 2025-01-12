@@ -27,7 +27,10 @@ export function SpeechRecorder() {
 
   useEffect(() => {
     if (results.length > 0) {
-      setEditableText(results.map((result) => result.transcript).join(" "));
+      const transcripts = results.map((result) =>
+        typeof result === "string" ? result : result.transcript
+      );
+      setEditableText(transcripts.join(" "));
     }
   }, [results]);
 
@@ -137,6 +140,5 @@ export function SpeechRecorder() {
         </ul>
       </div>
     </Card>
-    
   );
 }
