@@ -9,7 +9,11 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Mic, MicOff, Copy, Trash2, AlertCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-export function SpeechRecorder() {
+interface ResultType {
+  transcript: string;
+}
+
+const SpeechRecorder = () => {
   const [editableText, setEditableText] = useState("");
   const [copied, setCopied] = useState(false);
   
@@ -33,6 +37,7 @@ export function SpeechRecorder() {
       setEditableText(transcripts.join(" "));
     }
   }, [results]);
+  
 
   const handleCopy = async () => {
     try {
@@ -141,4 +146,6 @@ export function SpeechRecorder() {
       </div>
     </Card>
   );
-}
+};
+
+export default SpeechRecorder;

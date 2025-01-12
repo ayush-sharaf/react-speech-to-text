@@ -1,4 +1,9 @@
-import { SpeechRecorder } from "@/components/speech-to-text/speech-recorder";
+import dynamic from 'next/dynamic';
+
+const SpeechRecorder = dynamic(
+  () => import('@/components/speech-to-text/speech-recorder'),
+  { ssr: false }
+);
 
 export default function Home() {
   return (
