@@ -2,7 +2,7 @@
 
 A modern, responsive speech-to-text application built with Next.js and react-hook-speech-to-text. Transform your voice into text instantly with a beautiful, user-friendly interface.
 
-![Speech to Text Demo](https://next-speech-to-text.vercel.app/)
+[Speech to Text Demo](https://next-speech-to-text.vercel.app/)
 
 ## Features
 
